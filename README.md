@@ -1,7 +1,7 @@
+Features
 - created live weather
 - history of weather
 - filter history with location and from and to
-
 
 Tech stack
 - **Frontend:** React, Tailwind CSS
