@@ -51,7 +51,7 @@ function WeatherCard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-200 to-indigo-200 flex items-center justify-center p-4">
       <div className="max-w-5xl w-full rounded-3xl shadow-2xl backdrop-blur-md bg-white/20 p-6 flex flex-col md:flex-row gap-6">
-        {/* Left Card */}
+
         <div className="bg-white/60 rounded-3xl p-6 flex-1 flex flex-col justify-between text-gray-800">
           {loading || !weatherData ? (
             <p className="text-lg">Loading...</p>
@@ -60,7 +60,7 @@ function WeatherCard() {
               <div>
                 <p className="text-lg font-medium">Today</p>
 
-                {/* Centered Temperature with Icon */}
+
                 <div className="flex flex-col items-center mt-4">
                   <img
                     src={`https://openweathermap.org/img/wn/${weatherData.currentResponse.icon}@2x.png`}
@@ -74,7 +74,7 @@ function WeatherCard() {
 
                 <p className="text-xl mt-2">Sunny</p>
 
-                {/* City Dropdown */}
+
                 <div className="mt-4">
                   <label htmlFor="city" className="text-sm block mb-1">
                     Select City
@@ -107,9 +107,9 @@ function WeatherCard() {
           )}
         </div>
 
-        {/* Right Content */}
+
         <div className="flex-1 flex flex-col justify-between">
-          {/* Hourly Forecast */}
+
           <div className="bg-blue-100 p-4 rounded-xl grid grid-cols-5 gap-y-4 text-gray-800 text-sm shadow">
             {(loading ? Array(10).fill(null) : hourlyTemps).map((hour, idx) => (
               <div key={idx} className="flex flex-col items-center">
@@ -120,7 +120,6 @@ function WeatherCard() {
             ))}
           </div>
 
-          {/* Text Section */}
           <div className="mt-6 text-gray-700">
             <h2 className="text-lg font-semibold mb-2">Weather Insights</h2>
             <p className="text-sm text-gray-600 leading-relaxed">
